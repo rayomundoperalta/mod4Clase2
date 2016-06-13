@@ -41,7 +41,8 @@ public class ActivityDetail extends AppCompatActivity implements View.OnClickLis
     }
 
     private void changeFragmentB() {
-        FragmentList f = new FragmentList();
-        getFragmentManager().beginTransaction().replace(R.id.fragment_xml,f).commit();
+        getFragmentManager().beginTransaction().replace(R.id.fragmentHolder, new FragmentList()).commit();
+        // FragmentList f = new FragmentList();
+        //getFragmentManager().beginTransaction().replace(R.id.fragment_xml,f).commit();
     }
 }
