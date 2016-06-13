@@ -29,7 +29,8 @@ public class FragmentList extends Fragment {
     private boolean isWifi;
 
     @Nullable
-    public View obCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         listView = (ListView) view.findViewById(R.id.listItems);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
